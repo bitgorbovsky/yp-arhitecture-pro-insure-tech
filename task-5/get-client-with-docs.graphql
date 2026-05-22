@@ -1,0 +1,11 @@
+query {
+  clients(id: "client-id-1") {
+    name
+    documents {
+      type
+      number
+      issueDate: Date!
+      expiryDate: Date!
+    }
+  }
+}
