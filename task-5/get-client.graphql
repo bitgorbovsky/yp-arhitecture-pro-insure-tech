@@ -1,0 +1,6 @@
+query {
+  clients(id: "client-id-1") {
+    name,
+    age
+  }
+}

@@ -1,0 +1,35 @@
+scalar Date
+
+interface Person {
+    id: ID!
+    name: String!
+    age: Int!
+}
+
+type Query {
+    client(id: ID!): Client
+}
+
+type Client implements Person {
+    id: ID!
+    name: String!
+    age: Int!
+
+    documents(): [Document!]!
+    relatives(): [Relative!]!
+}
+
+type Document {
+    id: ID!
+    type: String!
+    number: String!
+    issueDate: Date!
+    expiryDate: Date!
+}
+
+type Relative implements Person {
+  id: ID!
+  name: String!
+  age: Int!
+  relationType: String!
+}
